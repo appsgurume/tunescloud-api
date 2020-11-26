@@ -56,7 +56,15 @@ class ProcessVideoJob implements ShouldQueue
 
             $this->videoModel->audio_url = url($audioUrl) ;
             $this->videoModel->metadata = $downloadedFileInfo['metadata'];
+            $metaDataAsArray = json_decode($downloadedFileInfo['metadata'], true);
+
+            $this->videoModel->title = $metaDataAsArray['title'];
+            $this->videoModel->description = $metaDataAsArray['description'];
+            $this->videoModel->thumbnail = $metaDataAsArray['thumbnail'];
+            $this->videoModel->hashtags = implode(',' , $metaDataAsArray['tags']);
+
             $this->videoModel->status = Constants::VIDEO_JOB_STATUS_SUCCESS;
+
             $this->videoModel->save();
 
         }else{

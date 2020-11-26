@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Helpers;
+use Illuminate\Support\MessageBag;
 
 /**
  * Trait ApiResponse

@@ -48,5 +48,7 @@ Route::group([
 Route::group([
     'prefix' => 'video/'
 ], function ($router) {
+    Route::get('{id}', 'VideoController@get');
+    Route::get('', 'VideoController@list');
     Route::post('upload', 'VideoController@upload');
 });
