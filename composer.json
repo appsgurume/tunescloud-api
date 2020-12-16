@@ -22,6 +22,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
         "phpunit/phpunit": "^9.0",
+        "pusher/pusher-php-server": "^4.1",
         "tymon/jwt-auth": "dev-develop"
     },
     "require-dev": {

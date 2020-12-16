@@ -19,7 +19,7 @@ class VideoController extends APIController
      * Upload a video
      */
     public function upload(Request $request){
-        $message = trans("common.error.generic");
+        $message = trans("video.error.generic");
 
         $requestValidationRules = [
             'url' => 'required'
@@ -41,7 +41,7 @@ class VideoController extends APIController
 
         if($videoModel->save()){
 
-            $message = trans("common.success.generic");
+            $message = trans("video.success.generic");
 
                 if($videoModel->save()){
 

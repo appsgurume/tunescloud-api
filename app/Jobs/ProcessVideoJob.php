@@ -10,11 +10,13 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use App\Http\Helpers\Constants;
 use App\Http\Helpers\Media;
+use App\Events\VideoConverted;
+use App\Http\Helpers\ApiResponse;
 
 class ProcessVideoJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels,
-        Media;
+        Media, ApiResponse;
 
     /**
      * Create a new job instance.
@@ -61,11 +63,17 @@ class ProcessVideoJob implements ShouldQueue
             $this->videoModel->title = $metaDataAsArray['title'];
             $this->videoModel->description = $metaDataAsArray['description'];
             $this->videoModel->thumbnail = $metaDataAsArray['thumbnail'];
-            $this->videoModel->hashtags = implode(',' , $metaDataAsArray['tags']);
+            $this->videoModel->hashtags = !empty($metaDataAsArray['tags']) ? implode(',' , $metaDataAsArray['tags']): implode(',' , []);
 
             $this->videoModel->status = Constants::VIDEO_JOB_STATUS_SUCCESS;
 
             $this->videoModel->save();
+
+            $eventPayLoad = $this->sendResponse(Constants::HTTP_SUCCESS,
+                "Video converted successfully",
+                $this->videoModel->refresh());
+
+            event(new VideoConverted($eventPayLoad, $this->videoModel->id));
 
         }else{
             $this->videoModel->status = Constants::VIDEO_JOB_STATUS_ERROR;

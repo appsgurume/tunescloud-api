@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81bb9679-57c7-4ebf-be3c-31775e3f233d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tunescloud-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tunescloud-api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/V1/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/V1/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Helpers/ApiResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Helpers/ApiResponse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Jobs/ProcessVideoJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/ProcessVideoJob.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/v1.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/v1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +160,8 @@
       <path value="$PROJECT_DIR$/vendor/codeception/module-phpbrowser" />
       <path value="$PROJECT_DIR$/vendor/codeception/lib-asserts" />
       <path value="$PROJECT_DIR$/vendor/codeception/lib-innerbrowser" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="ProjectId" id="1keUlm3Pd4Cno7lNUi4KQiIsYq5" />
@@ -168,7 +173,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/video_downloads" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../aumet/test_101/aumet-online-exhibition-api" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -201,7 +206,11 @@
       <workItem from="1606149994407" duration="13356000" />
       <workItem from="1606228024907" duration="13838000" />
       <workItem from="1606325197717" duration="3991000" />
-      <workItem from="1606405133049" duration="7795000" />
+      <workItem from="1606405133049" duration="8419000" />
+      <workItem from="1606980487048" duration="6944000" />
+      <workItem from="1607005698252" duration="599000" />
+      <workItem from="1607763996950" duration="9624000" />
+      <workItem from="1608058145733" duration="8865000" />
     </task>
     <servers />
   </component>
@@ -218,26 +227,14 @@
       </list>
     </option>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="342" y="214" width="586" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606244641307">
-      <screen x="0" y="27" width="1280" height="773" />
-    </state>
-    <state x="342" y="214" width="586" height="396" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1280.773@0.27.1280.773" timestamp="1606244641307" />
-    <state x="373" y="170" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606233845970">
-      <screen x="0" y="27" width="1280" height="773" />
-    </state>
-    <state x="373" y="170" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1280.773@0.27.1280.773" timestamp="1606233845970" />
-    <state x="435" y="338" width="399" height="149" key="NewPhpFileDialog" timestamp="1606154888134">
-      <screen x="0" y="27" width="1280" height="773" />
-    </state>
-    <state x="435" y="338" width="399" height="149" key="NewPhpFileDialog/0.27.1280.773@0.27.1280.773" timestamp="1606154888134" />
-    <state x="250" y="27" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606073437018">
-      <screen x="0" y="27" width="1280" height="773" />
-    </state>
-    <state x="250" y="27" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1280.773@0.27.1280.773" timestamp="1606073437018" />
-    <state x="365" y="326" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606327501364">
-      <screen x="0" y="27" width="1280" height="773" />
-    </state>
-    <state x="365" y="326" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1280.773@0.27.1280.773" timestamp="1606327501364" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/bootstrap/app.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
