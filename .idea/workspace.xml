@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81bb9679-57c7-4ebf-be3c-31775e3f233d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tunescloud-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tunescloud-api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/V1/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/V1/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/ProcessVideoJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/ProcessVideoJob.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +202,9 @@
       <workItem from="1606980487048" duration="6944000" />
       <workItem from="1607005698252" duration="599000" />
       <workItem from="1607763996950" duration="9624000" />
-      <workItem from="1608058145733" duration="8865000" />
+      <workItem from="1608058145733" duration="10484000" />
+      <workItem from="1608292792066" duration="1971000" />
+      <workItem from="1608359861657" duration="3054000" />
     </task>
     <servers />
   </component>

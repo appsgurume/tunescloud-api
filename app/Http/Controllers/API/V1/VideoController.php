@@ -87,7 +87,7 @@ class VideoController extends APIController
         $searchTermConditions = [];
 
         $perPage = !empty($request->input("per_page")) ?
-            $request->input("per_page") : 1;
+            $request->input("per_page") : 50;
 
         if($searchTerm = trim($request->input("search_term"))){
             $VideoModel->orWhere('hashtags', 'like', "%{$searchTerm}%");
@@ -95,7 +95,7 @@ class VideoController extends APIController
             $VideoModel->orWhere('description', 'like', "%{$searchTerm}%");
         }
 
-        $videoList = $VideoModel->paginate($perPage);
+        $videoList = $VideoModel->orderByDesc('created_at')->paginate($perPage);
 
         return $this->sendResponse(Constants::HTTP_SUCCESS,
             $message,
