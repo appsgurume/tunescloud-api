@@ -52,3 +52,16 @@ Route::group([
     Route::get('', 'VideoController@list');
     Route::post('upload', 'VideoController@upload');
 });
+
+/**
+ * Playlist endpoints
+ */
+
+Route::group([
+    'prefix' => 'playlist/'
+], function ($router) {
+    Route::get('{id}', 'PlaylistController@get');
+    Route::get('', 'PlaylistController@list');
+    Route::post('', 'PlaylistController@create');
+    Route::post('add/video', 'PlaylistController@addVideo');
+});

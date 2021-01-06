@@ -84,15 +84,25 @@ class VideoController extends APIController
 
         $VideoModel = Video::where([]);
 
-        $searchTermConditions = [];
-
         $perPage = !empty($request->input("per_page")) ?
             $request->input("per_page") : 50;
 
+        if($request->input("playlist_id")){
+            $playlistIds = explode(',', $request->input("playlist_id"));
+            if(count($playlistIds) > 0){
+                $VideoModel->whereHas('playlists', function($playlist) use ($playlistIds){
+                    $playlist->whereIn('playlists.id', $playlistIds);
+                });
+            }
+        }
+
         if($searchTerm = trim($request->input("search_term"))){
-            $VideoModel->orWhere('hashtags', 'like', "%{$searchTerm}%");
-            $VideoModel->orWhere('title', 'like', "%{$searchTerm}%");
-            $VideoModel->orWhere('description', 'like', "%{$searchTerm}%");
+            $VideoModel->where(function($q) use ($searchTerm){
+                $q->orWhere('hashtags', 'like', "%{$searchTerm}%");
+                $q->orWhere('title', 'like', "%{$searchTerm}%");
+                $q->orWhere('description', 'like', "%{$searchTerm}%");
+            });
+
         }
 
         $videoList = $VideoModel->orderByDesc('created_at')->paginate($perPage);
@@ -100,7 +110,6 @@ class VideoController extends APIController
         return $this->sendResponse(Constants::HTTP_SUCCESS,
             $message,
             $videoList);
-
 
     }
 }

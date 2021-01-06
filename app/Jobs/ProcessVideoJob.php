@@ -69,9 +69,12 @@ class ProcessVideoJob implements ShouldQueue
 
             $this->videoModel->save();
 
+            $payloadUpdated =  $this->videoModel->refresh();
+
             $eventPayLoad = $this->sendResponse(Constants::HTTP_SUCCESS,
                 "Video converted successfully",
-                $this->videoModel->refresh());
+                $payloadUpdated
+               );
 
             event(new VideoConverted($eventPayLoad, $this->videoModel->id));
 
