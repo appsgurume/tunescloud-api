@@ -41,7 +41,7 @@ class PlaylistController extends APIController
         $playlist->hashtags = $request->input("hashtags");
 
         if($playlist->save()){
-            $message = trans("playlist.success.generic");
+            $message = trans("playlist.success.created", ["title" => $playlist->title]);
             return $this->sendResponse(Constants::HTTP_SUCCESS, $message, $playlist);
         }
 
@@ -109,6 +109,7 @@ class PlaylistController extends APIController
         $requestValidationRules = [
             'playlist_id' => 'required|numeric',
             'video_id' => 'required|numeric',
+            "is_remove" => 'boolean'
 
         ];
 
@@ -121,7 +122,10 @@ class PlaylistController extends APIController
             );
         }
 
+        $isRemove = $request->input("is_remove");
+
         $playlist = Playlist::find($request->input("playlist_id"));
+
         $video = Video::find($request->input("video_id"));
 
 
@@ -135,19 +139,34 @@ class PlaylistController extends APIController
             return $this->sendResponse(Constants::HTTP_NOT_FOUND, $message);
         }
 
+        $videoPlaylistModel = null;
         $playlistVideo = PlaylistVideo::where("playlist_id", $playlist->id)
             ->where("video_id", $video->id)
+            ->where("is_deleted", 0)
             ->first();
 
-        if($playlistVideo){
-            $message = trans("playlist_video.error.already_added");
+        //die(print_r($playlistVideo));
+        if($playlistVideo and !$isRemove){
+            $message = trans("playlist_video.error.already_added",
+                ["playlist" => $playlist->title]);
             return $this->sendResponse(Constants::HTTP_ERROR, $message);
         }
 
-        $videoPlaylistModel = new PlaylistVideo();
+        if(!$playlistVideo and $isRemove){
+            $message = trans("playlist_video.error.already_removed",
+                ["playlist" => $playlist->title]);
+            return $this->sendResponse(Constants::HTTP_ERROR, $message);
+        }
 
-        $videoPlaylistModel->playlist_id = $playlist->id;
-        $videoPlaylistModel->video_id = $video->id;
+        if($playlistVideo){
+            $videoPlaylistModel =  $playlistVideo;
+            $videoPlaylistModel->is_deleted = 1;
+        }else{
+            $videoPlaylistModel = new PlaylistVideo();
+            $videoPlaylistModel->playlist_id = $playlist->id;
+            $videoPlaylistModel->video_id = $video->id;
+        }
+
         $videoPlaylistModel->user_id = $this->user ? $this->user->id : null;
 
         if(!$videoPlaylistModel->save()){
@@ -155,9 +174,12 @@ class PlaylistController extends APIController
             return $this->sendResponse(Constants::HTTP_ERROR, $message);
         }
 
-        $message = trans("playlist.success.playlist_video_added");
+        !$isRemove ? $message = trans("playlist.success.playlist_video_added",
+            ["playlist" => $playlist->title]) :
+            $message = trans("playlist.success.playlist_video_removed",
+                ["playlist" => $playlist->title]);
 
-        return $this->sendResponse(Constants::HTTP_ERROR, $message, $videoPlaylistModel);
+        return $this->sendResponse(Constants::HTTP_SUCCESS, $message, $videoPlaylistModel);
 
     }
 }

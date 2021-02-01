@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81bb9679-57c7-4ebf-be3c-31775e3f233d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/V1/PlaylistController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/PlaylistVideo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/playlist.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/playlist_video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/V1/PlayListController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/V1/PlayListVideosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/V1/PlaylistVideosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/V1/PlaylistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/V1/PlaylistController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/V1/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/V1/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/ProcessVideoJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/ProcessVideoJob.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PlayList.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Playlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PlayListVideos.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_22_164307_create_play_lists_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_22_164307_create_play_lists_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_22_165510_create_play_list_videos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_22_165510_create_play_list_videos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/video.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/v1.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/v1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/playlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/playlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/playlist_video.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/playlist_video.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tunescloud-ui" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -239,7 +228,20 @@
       <workItem from="1609766870971" duration="4911000" />
       <workItem from="1609772975800" duration="8900000" />
       <workItem from="1609947380508" duration="6617000" />
-      <workItem from="1609958067004" duration="3249000" />
+      <workItem from="1609958067004" duration="3849000" />
+      <workItem from="1610106421739" duration="599000" />
+      <workItem from="1610179685310" duration="2357000" />
+      <workItem from="1610300146517" duration="609000" />
+      <workItem from="1610473057156" duration="584000" />
+      <workItem from="1610551024538" duration="6489000" />
+      <workItem from="1610691178820" duration="801000" />
+      <workItem from="1610693828411" duration="4572000" />
+      <workItem from="1610810893183" duration="586000" />
+      <workItem from="1610903131166" duration="584000" />
+      <workItem from="1610986423490" duration="629000" />
+      <workItem from="1611407857963" duration="2594000" />
+      <workItem from="1612086296973" duration="626000" />
+      <workItem from="1612196446148" duration="621000" />
     </task>
     <servers />
   </component>
@@ -265,14 +267,18 @@
       <screen x="0" y="27" width="1280" height="773" />
     </state>
     <state x="373" y="170" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1280.773@0.27.1280.773" timestamp="1609953076654" />
+    <state x="423" y="170" width="424" height="484" key="FileChooserDialogImpl" timestamp="1612196486539">
+      <screen x="0" y="27" width="1280" height="773" />
+    </state>
+    <state x="423" y="170" width="424" height="484" key="FileChooserDialogImpl/0.27.1280.773@0.27.1280.773" timestamp="1612196486539" />
     <state x="129" y="47" key="SettingsEditor" timestamp="1609772929691">
       <screen x="0" y="27" width="1280" height="773" />
     </state>
     <state x="129" y="47" key="SettingsEditor/0.27.1280.773@0.27.1280.773" timestamp="1609772929691" />
-    <state x="331" y="151" width="652" height="580" key="find.popup" timestamp="1609953520471">
+    <state x="331" y="151" width="652" height="580" key="find.popup" timestamp="1610563262538">
       <screen x="0" y="27" width="1280" height="773" />
     </state>
-    <state x="331" y="151" width="652" height="580" key="find.popup/0.27.1280.773@0.27.1280.773" timestamp="1609953520471" />
+    <state x="331" y="151" width="652" height="580" key="find.popup/0.27.1280.773@0.27.1280.773" timestamp="1610563262538" />
     <state x="365" y="326" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1609953366018">
       <screen x="0" y="27" width="1280" height="773" />
     </state>

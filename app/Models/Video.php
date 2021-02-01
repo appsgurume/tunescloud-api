@@ -13,6 +13,7 @@ class Video extends Model
 
     public function playlists(){
         return $this->belongsToMany('\App\Models\Playlist', 'playlist_videos',
-            'video_id', 'playlist_id');
+            'video_id', 'playlist_id')
+            ->wherePivot('is_deleted', '=', 0);
     }
 }

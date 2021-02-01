@@ -56,12 +56,14 @@ class VideoController extends APIController
 
     }
 
-    public function get($id){
+    public function get(Request $request, $id){
 
         $message = trans("common.error.generic");
 
 
-        $video = Video::find($id);
+        $video = $request->input("include_playlists") ?
+            Video::with('playlists')->find($id) :
+            Video::find($id);
 
         if ($video) {
 
@@ -92,6 +94,7 @@ class VideoController extends APIController
             if(count($playlistIds) > 0){
                 $VideoModel->whereHas('playlists', function($playlist) use ($playlistIds){
                     $playlist->whereIn('playlists.id', $playlistIds);
+                    $playlist->where('playlists.is_deleted', 0);
                 });
             }
         }
@@ -104,6 +107,8 @@ class VideoController extends APIController
             });
 
         }
+
+        $request->input("include_playlists") ? $VideoModel->with('playlists') : "";
 
         $videoList = $VideoModel->orderByDesc('created_at')->paginate($perPage);
 
